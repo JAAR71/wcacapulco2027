@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Finanzas · Acapulco 2027 — Copa del Mundo de Escopeta (BORRADOR)</title>
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="finanzas">
+<main id="main">
+<section class="page-head"><div class="wrap"><div class="crumbs"><a href="index.html"><span lang="es">Inicio</span><span lang="en">Home</span></a> / <span lang="es">Finanzas</span><span lang="en">Finance</span></div><h1><span lang="es">Finanzas</span><span lang="en">Finance</span></h1><p><span lang="es">Hoja de ingresos y egresos del evento con balance calculado. Montos de ejemplo.</span><span lang="en">Event income and expense sheet with computed balance. Example amounts.</span></p></div></section>
+<section class="section"><div class="wrap">
+<div class="warn" style="margin-bottom:14px"><span lang="es">Todos los conceptos y montos son de ejemplo (ficticios). Moneda única: MXN. Edita cualquier celda; los totales se recalculan y se guardan en este navegador.</span><span lang="en">All items and amounts are examples (fictitious). Single currency: MXN. Edit any cell; totals recompute and are saved in this browser.</span></div>
+<div class="kpis" id="finKpis"></div>
+<div class="section-head"><h3 style="margin:0"><span lang="es">Movimientos</span><span lang="en">Entries</span></h3><div class="btns">
+<select id="finFilter" style="padding:7px 10px;border:1px solid #cfd3d8;border-radius:8px;font:inherit"><option value="all" data-es="Todos" data-en="All">Todos</option><option value="in" data-es="Ingresos" data-en="Income">Ingresos</option><option value="out" data-es="Egresos" data-en="Expenses">Egresos</option></select>
+<button class="btn btn-primary btn-sm" id="finAddIn" type="button">+ <span lang="es">Ingreso</span><span lang="en">Income</span></button><button class="btn btn-primary btn-sm" id="finAddOut" type="button" style="background:var(--tinta)">+ <span lang="es">Egreso</span><span lang="en">Expense</span></button><button class="btn btn-outline btn-sm" id="finCsv" type="button">CSV ↓</button><button class="btn btn-outline btn-sm" id="finReset" type="button"><span lang="es">Restaurar ejemplo</span><span lang="en">Reset example</span></button></div></div>
+<div class="table-wrap"><table id="finTable"><thead><tr><th><span lang="es">Tipo</span><span lang="en">Type</span></th><th><span lang="es">Categoría</span><span lang="en">Category</span></th><th><span lang="es">Concepto</span><span lang="en">Item</span></th><th class="num"><span lang="es">Monto (MXN)</span><span lang="en">Amount (MXN)</span></th><th></th></tr></thead><tbody id="finBody"></tbody>
+<tfoot><tr><td colspan="3"><span lang="es">Total ingresos</span><span lang="en">Total income</span></td><td class="num pos" id="fIn"></td><td></td></tr><tr><td colspan="3"><span lang="es">Total egresos</span><span lang="en">Total expenses</span></td><td class="num neg" id="fOut"></td><td></td></tr><tr><td colspan="3">Balance</td><td class="num" id="fBal"></td><td></td></tr></tfoot></table></div>
+<h3 class="mt"><span lang="es">Resumen por categoría</span><span lang="en">Summary by category</span></h3><div class="table-wrap"><table><thead><tr><th><span lang="es">Categoría</span><span lang="en">Category</span></th><th class="num"><span lang="es">Ingresos</span><span lang="en">Income</span></th><th class="num"><span lang="es">Egresos</span><span lang="en">Expenses</span></th><th class="num">Balance</th></tr></thead><tbody id="finCat"></tbody></table></div>
+</div></section>
+</main>
+<script src="js/layout.js"></script>
+<script src="js/finanzas.js"></script>
+</body>
+</html>

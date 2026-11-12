@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Registros · Acapulco 2027 — Copa del Mundo de Escopeta (BORRADOR)</title>
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="registros">
+<main id="main">
+<section class="page-head"><div class="wrap"><div class="crumbs"><a href="index.html"><span lang="es">Inicio</span><span lang="en">Home</span></a> / <span lang="es">Registros</span><span lang="en">Registrations</span></div><h1><span lang="es">Registros</span><span lang="en">Registrations</span></h1><p><span lang="es">Registro logístico local de equipos, atletas y oficiales (hospedaje, traslados, acreditación).</span><span lang="en">Local logistics register for teams, athletes and officials (accommodation, transport, accreditation).</span></p></div></section>
+<section class="section"><div class="wrap"><div class="official-cta"><div><strong><span lang="es">Inscripción oficial de atletas y oficiales: sistema ISSF</span><span lang="en">Official athlete & official entries: ISSF system</span></strong>
+<p><span lang="es">Conforme al Reglamento ISSF (art. 3.8.3.2), las inscripciones oficiales se hacen únicamente en shootingsportscloud.com. Este sitio solo lleva el registro logístico local.</span><span lang="en">Under the ISSF Rule Book (art. 3.8.3.2), official entries are made only at shootingsportscloud.com. This site only keeps the local logistics register.</span></p></div>
+<a class="btn btn-gold" href="https://shootingsportscloud.com" target="_blank" rel="noopener"><span lang="es">Ir a shootingsportscloud.com</span><span lang="en">Go to shootingsportscloud.com</span> ↗</a></div>
+<div class="grid mt" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));align-items:start">
+<div class="card"><h3><span lang="es">Nuevo registro</span><span lang="en">New registration</span></h3>
+<div class="tabs" role="tablist" id="regTabs"><button type="button" role="tab" data-type="team" aria-selected="true"><span lang="es">Equipo / delegación</span><span lang="en">Team / delegation</span></button><button type="button" role="tab" data-type="athlete" aria-selected="false"><span lang="es">Atleta</span><span lang="en">Athlete</span></button><button type="button" role="tab" data-type="official" aria-selected="false"><span lang="es">Oficial</span><span lang="en">Official</span></button></div>
+<form class="form" id="regForm">
+<div class="field"><label for="rCountry"><span lang="es">País / federación</span><span lang="en">Country / federation</span></label><input id="rCountry" required data-ph-es="Ej. MEX — FEMETI" data-ph-en="e.g. MEX — FEMETI"></div>
+<div class="field" data-for="athlete official"><label for="rName"><span lang="es">Nombre completo</span><span lang="en">Full name</span></label><input id="rName" data-ph-es="Como aparece en el pasaporte" data-ph-en="As shown on passport"></div>
+<div class="field" data-for="team"><label for="rHead"><span lang="es">Jefe de delegación</span><span lang="en">Head of delegation</span></label><input id="rHead"></div>
+<div class="field" data-for="team"><label for="rSize"><span lang="es">Número de integrantes</span><span lang="en">Number of members</span></label><input id="rSize" type="number" min="1"></div>
+<div class="field" data-for="athlete"><label for="rEvent"><span lang="es">Prueba</span><span lang="en">Event</span></label><select id="rEvent"><option value="TR-M" data-es="Trap hombres" data-en="Trap men">Trap hombres</option><option value="TR-W" data-es="Trap mujeres" data-en="Trap women">Trap mujeres</option><option value="SK-M" data-es="Skeet hombres" data-en="Skeet men">Skeet hombres</option><option value="SK-W" data-es="Skeet mujeres" data-en="Skeet women">Skeet mujeres</option><option value="TR-MX" data-es="Trap equipo mixto" data-en="Trap mixed team">Trap equipo mixto</option><option value="SK-MX" data-es="Skeet equipo mixto" data-en="Skeet mixed team">Skeet equipo mixto</option></select></div>
+<div class="field" data-for="athlete"><label for="rId">ISSF ID</label><input id="rId" data-ph-es="Del sistema shootingsportscloud" data-ph-en="From shootingsportscloud"></div>
+<div class="field" data-for="official"><label for="rRole"><span lang="es">Función</span><span lang="en">Role</span></label><select id="rRole"><option value="coach" data-es="Entrenador" data-en="Coach">Entrenador</option><option value="head" data-es="Jefe de equipo" data-en="Team leader">Jefe de equipo</option><option value="medic" data-es="Médico / fisioterapeuta" data-en="Doctor / physio">Médico / fisioterapeuta</option><option value="judge" data-es="Juez" data-en="Judge">Juez</option><option value="other" data-es="Otro" data-en="Other">Otro</option></select></div>
+<div class="field"><label for="rEmail"><span lang="es">Correo de contacto</span><span lang="en">Contact email</span></label><input id="rEmail" type="email" required></div>
+<div class="btns"><button class="btn btn-primary" type="submit"><span lang="es">Guardar registro (demo)</span><span lang="en">Save registration (demo)</span></button></div>
+<p class="muted" style="font-size:.8rem;margin:0"><span lang="es">Demo local: los datos se guardan solo en este navegador (localStorage). No se envía nada.</span><span lang="en">Local demo: data is stored only in this browser (localStorage). Nothing is sent.</span></p>
+</form></div>
+<div><div class="kpis" id="regKpis"></div>
+<div class="section-head"><h3 style="margin:0"><span lang="es">Registros capturados</span><span lang="en">Saved registrations</span></h3><div class="btns"><button class="btn btn-outline btn-sm" id="regCsv" type="button">CSV ↓</button><button class="btn btn-outline btn-sm" id="regReset" type="button"><span lang="es">Restaurar ejemplo</span><span lang="en">Reset example</span></button></div></div>
+<div class="table-wrap"><table><thead><tr><th><span lang="es">Tipo</span><span lang="en">Type</span></th><th><span lang="es">País</span><span lang="en">Country</span></th><th><span lang="es">Nombre / detalle</span><span lang="en">Name / detail</span></th><th></th></tr></thead><tbody id="regBody"></tbody></table></div></div>
+</div></div></section>
+</main>
+<script src="js/layout.js"></script>
+<script src="js/registros.js"></script>
+</body>
+</html>

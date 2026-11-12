@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Logística · Acapulco 2027 — Copa del Mundo de Escopeta (BORRADOR)</title>
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="logistica">
+<main id="main">
+<section class="page-head"><div class="wrap"><div class="crumbs"><a href="index.html"><span lang="es">Inicio</span><span lang="en">Home</span></a> / <span lang="es">Logística</span><span lang="en">Logistics</span></div><h1><span lang="es">Logística</span><span lang="en">Logistics</span></h1><p><span lang="es">Reservaciones de hotel, traslados (aeropuerto y campo de tiro) y otros servicios para delegaciones.</span><span lang="en">Hotel bookings, transfers (airport and range) and other services for delegations.</span></p></div></section>
+<section class="section"><div class="wrap">
+<div class="tabs" role="tablist" id="logTabs"><button type="button" data-tab="hotel" aria-selected="true">🏨 <span lang="es">Hoteles</span><span lang="en">Hotels</span></button><button type="button" data-tab="transporte" aria-selected="false">🚌 <span lang="es">Transporte</span><span lang="en">Transport</span></button><button type="button" data-tab="otros" aria-selected="false">🧾 <span lang="es">Otros servicios</span><span lang="en">Other services</span></button></div>
+<div data-panel="hotel"><div class="grid grid-3" id="hotelCards"></div>
+<h3 class="mt"><span lang="es">Reservaciones</span><span lang="en">Bookings</span></h3>
+<form class="form card" id="hotelForm" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr));align-items:end">
+<div class="field"><label for="hDel"><span lang="es">Delegación</span><span lang="en">Delegation</span></label><input id="hDel" required data-ph-es="Ej. MEX" data-ph-en="e.g. MEX"></div>
+<div class="field"><label for="hHotel">Hotel</label><select id="hHotel"></select></div>
+<div class="field"><label for="hRooms"><span lang="es">Habitaciones</span><span lang="en">Rooms</span></label><input id="hRooms" type="number" min="1" value="1" required></div>
+<div class="field"><label for="hIn"><span lang="es">Llegada</span><span lang="en">Check-in</span></label><input id="hIn" type="date" required></div>
+<div class="field"><label for="hOut"><span lang="es">Salida</span><span lang="en">Check-out</span></label><input id="hOut" type="date" required></div>
+<button class="btn btn-primary" type="submit"><span lang="es">Agregar (demo)</span><span lang="en">Add (demo)</span></button></form>
+<div class="table-wrap mt"><table><thead><tr><th><span lang="es">Delegación</span><span lang="en">Delegation</span></th><th>Hotel</th><th class="num"><span lang="es">Hab.</span><span lang="en">Rooms</span></th><th><span lang="es">Llegada</span><span lang="en">In</span></th><th><span lang="es">Salida</span><span lang="en">Out</span></th><th class="num"><span lang="es">Noches</span><span lang="en">Nights</span></th><th class="num"><span lang="es">Total (MXN)</span><span lang="en">Total (MXN)</span></th><th></th></tr></thead><tbody id="hotelBody"></tbody><tfoot><tr><td colspan="6">Total</td><td class="num" id="hotelTotal"></td><td></td></tr></tfoot></table></div></div>
+<div data-panel="transporte" hidden>
+<form class="form card" id="trForm" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr));align-items:end">
+<div class="field"><label for="tDel"><span lang="es">Delegación</span><span lang="en">Delegation</span></label><input id="tDel" required data-ph-es="Ej. MEX" data-ph-en="e.g. MEX"></div>
+<div class="field"><label for="tType"><span lang="es">Servicio</span><span lang="en">Service</span></label><select id="tType"><option value="arr" data-es="Llegada aeropuerto → hotel" data-en="Airport arrival → hotel">Llegada aeropuerto → hotel</option><option value="dep" data-es="Hotel → aeropuerto (salida)" data-en="Hotel → airport (departure)">Hotel → aeropuerto (salida)</option><option value="range" data-es="Hotel ↔ campo de tiro (diario)" data-en="Hotel ↔ range (daily)">Hotel ↔ campo de tiro (diario)</option><option value="arms" data-es="Traslado de armas aduana → armería" data-en="Firearms transfer customs → armory">Traslado de armas aduana → armería</option></select></div>
+<div class="field"><label for="tFlight"><span lang="es">Vuelo</span><span lang="en">Flight</span></label><input id="tFlight" data-ph-es="Ej. XX 000" data-ph-en="e.g. XX 000"></div>
+<div class="field"><label for="tDate"><span lang="es">Fecha y hora</span><span lang="en">Date & time</span></label><input id="tDate" type="datetime-local" required></div>
+<div class="field"><label for="tPax"><span lang="es">Pasajeros</span><span lang="en">Passengers</span></label><input id="tPax" type="number" min="1" value="1" required></div>
+<button class="btn btn-primary" type="submit"><span lang="es">Solicitar (demo)</span><span lang="en">Request (demo)</span></button></form>
+<div class="table-wrap mt"><table><thead><tr><th><span lang="es">Delegación</span><span lang="en">Delegation</span></th><th><span lang="es">Servicio</span><span lang="en">Service</span></th><th><span lang="es">Vuelo</span><span lang="en">Flight</span></th><th><span lang="es">Fecha</span><span lang="en">Date</span></th><th class="num">Pax</th><th><span lang="es">Estatus</span><span lang="en">Status</span></th><th></th></tr></thead><tbody id="trBody"></tbody></table></div>
+<p class="muted mt" style="font-size:.85rem"><span lang="es">Horarios de shuttle hotel–campo por definir.</span><span lang="en">Hotel–range shuttle timetable TBD.</span></p></div>
+<div data-panel="otros" hidden><div class="grid grid-3" id="otrosCards"></div></div>
+<p class="mt"><button class="btn btn-outline btn-sm" id="logReset" type="button"><span lang="es">Restaurar ejemplo</span><span lang="en">Reset example</span></button></p>
+</div></section>
+</main>
+<script src="js/layout.js"></script>
+<script src="js/logistica.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Documentos y permisos · Acapulco 2027 — Copa del Mundo de Escopeta (BORRADOR)</title>
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="documentos">
+<main id="main">
+<section class="page-head"><div class="wrap"><div class="crumbs"><a href="index.html"><span lang="es">Inicio</span><span lang="en">Home</span></a> / <span lang="es">Documentos y permisos</span><span lang="en">Documents & permits</span></div><h1><span lang="es">Documentos y permisos</span><span lang="en">Documents & permits</span></h1><p><span lang="es">Control documental por delegación: permisos de armas y municiones (importación/exportación), SEDENA, aduanas y pago de derechos.</span><span lang="en">Document control per delegation: firearms & ammunition permits (import/export), SEDENA, customs and fee payments.</span></p></div></section>
+<section class="section"><div class="wrap">
+<div class="note" style="margin-bottom:14px"><span lang="es">Guidelines art. 12: el comité organizador gestiona los permisos de importación y exportación de armas. Haz clic en un estatus para cambiarlo; usa 📎 para adjuntar (demo: solo se guarda el nombre del archivo, en este navegador).</span><span lang="en">Guidelines art. 12: the organizing committee handles firearms import/export permits. Click a status to change it; use 📎 to attach (demo: only the file name is stored, in this browser).</span></div>
+<div class="kpis" id="docKpis"></div>
+<div class="section-head"><div class="legend"><b><span lang="es">Estatus:</span><span lang="en">Status:</span></b><span class="st st-pend"><span lang="es">Pendiente</span><span lang="en">Pending</span></span><span class="st st-rev"><span lang="es">En revisión</span><span lang="en">In review</span></span><span class="st st-ok"><span lang="es">Aprobado</span><span lang="en">Approved</span></span><span class="st st-rej"><span lang="es">Rechazado</span><span lang="en">Rejected</span></span></div>
+<div class="btns"><input id="docNew" style="padding:7px 10px;border:1px solid #cfd3d8;border-radius:8px;font:inherit" data-ph-es="País (ej. ITA)" data-ph-en="Country (e.g. ITA)"><button class="btn btn-primary btn-sm" id="docAdd" type="button">+ <span lang="es">Delegación</span><span lang="en">Delegation</span></button><button class="btn btn-outline btn-sm" id="docCsv" type="button">CSV ↓</button><button class="btn btn-outline btn-sm" id="docReset" type="button"><span lang="es">Restaurar ejemplo</span><span lang="en">Reset example</span></button></div></div>
+<div class="table-wrap"><table id="docTable"><thead id="docHead"></thead><tbody id="docBody"></tbody></table></div>
+<p class="muted mt" style="font-size:.85rem"><span lang="es">Delegaciones y estatus son de ejemplo. En producción, la carga de archivos requiere un servidor seguro con control de acceso por delegación.</span><span lang="en">Delegations and statuses are examples. In production, file upload needs a secure server with per-delegation access control.</span></p>
+</div></section>
+</main>
+<script src="js/layout.js"></script>
+<script src="js/documentos.js"></script>
+</body>
+</html>
