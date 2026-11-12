@@ -8,6 +8,7 @@
 
 - **Opción 1 (más simple):** doble clic en `index.html`. Funciona sin servidor ni internet (salvo los enlaces externos).
 - **Opción 2 (servidor local):** en esta carpeta ejecuta `python3 -m http.server 8000` y abre <http://localhost:8000>.
+- **Live (dev):** https://www.rubinmex.com/wcacapulco2027/ — Cloudflare Pages + Worker. Un `git push` a `main` solo actualiza el live si está configurado el Action (ver [docs/DEPLOY.md](docs/DEPLOY.md)).
 
 No requiere build, Node ni dependencias: HTML, CSS y JavaScript puros.
 
@@ -38,7 +39,9 @@ wcacapulco2027/
 ├── js/logistica.js     Módulo Logística
 ├── js/finanzas.js      Módulo Finanzas
 ├── supabase/           schema.sql + seed.sql (Postgres / RLS / Storage)
-├── docs/SETUP-SUPABASE.md  Setup, DBeaver, deploy wca.rubinmex.com
+├── docs/SETUP-SUPABASE.md  Setup Supabase, DBeaver
+├── docs/DEPLOY.md      Auto-deploy Pages (GitHub Action) + deploy manual
+├── .github/workflows/  Deploy a Cloudflare Pages en push a main
 ├── assets/img/         Logo propuesto
 └── capturas/           Capturas de verificación
 ```

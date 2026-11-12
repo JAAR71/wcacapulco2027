@@ -55,12 +55,11 @@ Datos en: **Project Settings → Database**. No uses la `service_role` API key a
 
 Con `useSupabase: false` el sitio sigue en demo `localStorage` (sin login).
 
-## 6. Deploy desarrollo: `wca.rubinmex.com`
+## 6. Deploy desarrollo (live)
 
-1. Sube el sitio a **Cloudflare Pages** (directorio raíz del repo; sin build, o build vacío).
-2. En DNS de `rubinmex.com`: CNAME `wca` → tu proyecto Pages.
-3. Asegura que `js/config.js` en el deploy tenga URL/anon correctos (no subas `service_role`).
-4. Mantén `noindex` y el banner de borrador.
+El live actual es **`https://www.rubinmex.com/wcacapulco2027/`** (Pages + Worker). Auto-deploy y secretos: ver [DEPLOY.md](DEPLOY.md).
+
+Asegura que `js/config.js` en el deploy tenga URL/anon correctos (no subas `service_role`). Mantén `noindex` y el banner de borrador.
 
 ## 7. Cutover a `wcacapulco2027.com`
 
