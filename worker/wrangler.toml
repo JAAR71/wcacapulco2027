@@ -1,0 +1,8 @@
+name = "wcacapulco2027-proxy"
+main = "src/index.js"
+compatibility_date = "2025-11-12"
+
+routes = [
+  { pattern = "rubinmex.com/wcacapulco2027*", zone_name = "rubinmex.com" },
+  { pattern = "www.rubinmex.com/wcacapulco2027*", zone_name = "rubinmex.com" }
+]
