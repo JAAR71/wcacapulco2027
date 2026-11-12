@@ -51,7 +51,7 @@ html[data-lang="es"] [lang="en"]:not(html), html[data-lang="en"] [lang="es"]:not
 .header::after{content:"";display:block;height:4px;background:linear-gradient(90deg,var(--verde) 0 33%,#fff 33% 66%,var(--rojo) 66%);position:absolute;left:0;right:0;bottom:-8px}
 .header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:72px;gap:12px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--tinta)}
-.brand img{width:54px;height:54px;object-fit:contain}
+.brand img{width:54px;height:54px;object-fit:contain;flex-shrink:0}
 .brand strong{display:block;font-size:1rem;letter-spacing:.02em}
 .brand small{display:block;color:var(--gris);font-size:.75rem}
 .menu-btn{display:inline-flex;background:none;border:1px solid var(--linea);border-radius:8px;padding:8px 10px;cursor:pointer;font-size:1.2rem}

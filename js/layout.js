@@ -49,14 +49,14 @@
     '<div class="auth-slot" id="authSlot"></div>' +
     '<div class="langs" role="group" aria-label="Idioma / Language"><button type="button" data-set-lang="es">ES</button><button type="button" data-set-lang="en">EN</button></div></div></div>' +
     '<header class="header"><div class="wrap">' +
-    '<a class="brand" href="index.html"><img src="assets/img/logo-emblema.jpg" alt="Logo Acapulco 2027 (propuesta)"><span><strong>ACAPULCO 2027</strong>' +
+    '<a class="brand" href="index.html"><img src="assets/img/logo-emblema.jpg?v=3" alt="Logo Acapulco 2027 (propuesta)"><span><strong>ACAPULCO 2027</strong>' +
     "<small>" + t({ es: "Copa del Mundo de Escopeta · Guerrero, México", en: "Shotgun World Cup · Guerrero, Mexico" }) + "</small></span></a>" +
     '<button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menú">☰</button>' +
     '<nav class="nav" id="nav" aria-label="Principal">' + navHtml() + "</nav></div></header>";
 
   var foot =
     '<footer class="footer"><div class="stripe"></div><div class="wrap"><div class="cols">' +
-    '<div><div class="flogo"><img src="assets/img/logo-emblema.jpg" alt=""><div><strong style="color:#fff">ACAPULCO 2027</strong><br>' +
+    '<div><div class="flogo"><img src="assets/img/logo-emblema.jpg?v=3" alt=""><div><strong style="color:#fff">ACAPULCO 2027</strong><br>' +
     t({ es: "Copa del Mundo ISSF de Escopeta", en: "ISSF World Cup Shotgun" }) + "</div></div>" +
     "<p>" + t({ es: "Comité Organizador Local (por confirmar). Organiza: FEMETI. Sede: Club Caza, Tiro y Pesca de Acapulco.", en: "Local Organizing Committee (to be confirmed). Organizer: FEMETI. Venue: Club Caza, Tiro y Pesca de Acapulco." }) + "</p>" +
     '<p class="muted" style="color:#8d939a">' + t({ es: "Sitio local de información y logística. No sustituye los sistemas oficiales de la ISSF.", en: "Local information & logistics site. It does not replace official ISSF systems." }) + "</p></div>" +
