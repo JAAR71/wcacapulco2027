@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin · Acapulco 2027 (BORRADOR)</title>
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="admin">
+<main id="main">
+<section class="page-head"><div class="wrap">
+<div class="crumbs"><a href="index.html"><span lang="es">Inicio</span><span lang="en">Home</span></a> / Admin</div>
+<h1><span lang="es">Administración</span><span lang="en">Administration</span></h1>
+<p><span lang="es">Usuarios, roles y delegaciones. Solo rol admin.</span><span lang="en">Users, roles and delegations. Admin role only.</span></p>
+</div></section>
+<section class="section"><div class="wrap">
+<div class="section-head"><h2 style="margin:0"><span lang="es">Usuarios</span><span lang="en">Users</span></h2></div>
+<div class="table-wrap"><table>
+<thead><tr>
+<th>Email</th>
+<th><span lang="es">Nombre</span><span lang="en">Name</span></th>
+<th><span lang="es">Rol</span><span lang="en">Role</span></th>
+<th><span lang="es">Delegación</span><span lang="en">Delegation</span></th>
+<th><span lang="es">Activo</span><span lang="en">Active</span></th>
+<th></th>
+</tr></thead>
+<tbody id="adminUsers"></tbody>
+</table></div>
+
+<div class="section-head mt"><h2 style="margin:0"><span lang="es">Delegaciones</span><span lang="en">Delegations</span></h2></div>
+<form class="form" id="delForm" style="display:grid;grid-template-columns:1fr 2fr auto;gap:10px;align-items:end;max-width:640px">
+<div class="field" style="margin:0"><label for="dCode">Code</label><input id="dCode" required maxlength="8" data-ph-es="Ej. MEX" data-ph-en="e.g. MEX"></div>
+<div class="field" style="margin:0"><label for="dName"><span lang="es">Nombre</span><span lang="en">Name</span></label><input id="dName" required></div>
+<button class="btn btn-primary" type="submit">+ <span lang="es">Guardar</span><span lang="en">Save</span></button>
+</form>
+<div class="table-wrap mt"><table>
+<thead><tr><th>Code</th><th><span lang="es">Nombre</span><span lang="en">Name</span></th><th><span lang="es">Activa</span><span lang="en">Active</span></th></tr></thead>
+<tbody id="adminDels"></tbody>
+</table></div>
+<p class="muted" style="font-size:.85rem;margin-top:1.5rem">
+<span lang="es">Primer admin: crea el usuario en Authentication (o con “Solicitar acceso”) y en DBeaver/SQL ejecuta el UPDATE de supabase/seed.sql.</span>
+<span lang="en">First admin: create the user in Authentication (or via “Request access”) then run the UPDATE in supabase/seed.sql via DBeaver/SQL.</span>
+</p>
+</div></section>
+</main>
+<script src="js/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/layout.js"></script>
+<script src="js/db.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

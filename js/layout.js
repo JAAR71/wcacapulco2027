@@ -46,6 +46,7 @@
     '<a href="' + LINKS.ssc + '" target="_blank" rel="noopener">★ ' + t({ es: "Inscripción oficial ISSF (shootingsportscloud)", en: "Official ISSF entries (shootingsportscloud)" }) + "</a>" +
     '<a href="' + LINKS.issf + '" target="_blank" rel="noopener">issf-sports.org</a>' +
     '<a href="' + LINKS.femeti + '" target="_blank" rel="noopener">FEMETI</a></div>' +
+    '<div class="auth-slot" id="authSlot"></div>' +
     '<div class="langs" role="group" aria-label="Idioma / Language"><button type="button" data-set-lang="es">ES</button><button type="button" data-set-lang="en">EN</button></div></div></div>' +
     '<header class="header"><div class="wrap">' +
     '<a class="brand" href="index.html"><img src="assets/img/logo-emblema.jpg" alt="Logo Acapulco 2027 (propuesta)"><span><strong>ACAPULCO 2027</strong>' +

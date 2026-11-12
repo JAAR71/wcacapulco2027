@@ -26,14 +26,21 @@ wcacapulco2027/
 ├── resultados.html     Resultados: enlaces a ISSF y Sius + ediciones anteriores
 ├── contacto.html       Contacto: directorio (ejemplo) y formulario demo
 ├── css/styles.css      Estilos (paleta tomada del logo, mobile-first)
-├── js/layout.js        Banner de borrador, header, menú, footer, cambio de idioma ES/EN y utilidades
+├── login.html          Acceso / solicitud de cuenta
+├── admin.html          Admin usuarios y delegaciones (solo rol admin)
+├── js/config.js        URL + anon key de Supabase (ver config.example.js)
+├── js/db.js            Cliente Supabase y API de datos
+├── js/auth.js          Sesión, gate de módulos, chip de usuario
+├── js/layout.js        Banner de borrador, header, menú, footer, idioma ES/EN
 ├── js/home.js          Cuenta regresiva
-├── js/registros.js     Lógica del módulo Registros
-├── js/documentos.js    Lógica del módulo Documentos y permisos
-├── js/logistica.js     Lógica del módulo Logística
-├── js/finanzas.js      Lógica del módulo Finanzas
-├── assets/img/         Logo propuesto (original, emblema recortado, 512 px, favicon)
-└── capturas/           Capturas de verificación (escritorio, móvil y módulos)
+├── js/registros.js     Módulo Registros
+├── js/documentos.js    Módulo Documentos y permisos (+ Storage)
+├── js/logistica.js     Módulo Logística
+├── js/finanzas.js      Módulo Finanzas
+├── supabase/           schema.sql + seed.sql (Postgres / RLS / Storage)
+├── docs/SETUP-SUPABASE.md  Setup, DBeaver, deploy wca.rubinmex.com
+├── assets/img/         Logo propuesto
+└── capturas/           Capturas de verificación
 ```
 
 ## Características
@@ -42,7 +49,7 @@ wcacapulco2027/
 - **Responsive / mobile-first**: menú hamburguesa en celular; tablas con scroll horizontal; Finanzas en tarjetas en móvil.
 - **Layout inspirado en issf-sports.org**: barra superior, header con navegación, hero, bloques de noticias y eventos, footer institucional.
 - **Paleta del logo** (muestreo de píxeles): verde `#00573a`, rojo `#ce0f1a`, oro `#d98a1c`, naranja (plato) `#ea5f13`, azul (mar) `#017197`, tinta `#0a0b0d`.
-- **Módulos demo interactivos**: los datos se guardan solo en el navegador (`localStorage`); nada se envía a ningún servidor. Cada módulo tiene "Restaurar ejemplo" y exportación CSV.
+- **Módulos operativos + Supabase**: con `js/config.js` (`useSupabase: true`) los datos van a Postgres (Auth, RLS, Storage). Sin configurar, siguen en `localStorage` (demo). Ver [docs/SETUP-SUPABASE.md](docs/SETUP-SUPABASE.md). Roles: `admin`, `staff`, `delegation`. Páginas: `login.html`, `admin.html`.
 - **Formato de cantidades**: comas de miles y punto decimal (ej. 12,345.67). Moneda única en Finanzas y Logística: MXN.
 - `noindex, nofollow` en todas las páginas mientras sea borrador.
 
@@ -68,7 +75,7 @@ wcacapulco2027/
 2. **Logo**: es propuesta; requiere aprobación ISSF (art. 13.1: preliminar 6 meses antes, final 4 meses antes).
 3. **Delegado Técnico**: aprobar Información General y formularios (art. 6).
 4. **Datos reales**: fechas oficiales, programa, cuotas, hoteles y tarifas, transporte, dirección del club, contactos oficiales (evitar correos Hotmail), textos de visas y permisos.
-5. **Producción**: los módulos de Registros, Documentos, Logística y Finanzas son maquetas. Para uso real necesitan backend con autenticación por delegación, almacenamiento seguro de archivos, respaldo y control de acceso (Finanzas debería ser solo interno).
+5. **Producción / Supabase**: seguir [docs/SETUP-SUPABASE.md](docs/SETUP-SUPABASE.md) (proyecto, SQL, primer admin, DBeaver, Cloudflare Pages en `wca.rubinmex.com`, cutover a `wcacapulco2027.com`).
 6. **Fotos** del campo de tiro y de Acapulco, y mapa (hoy son placeholders).
 7. Enlace exacto de resultados en vivo (Sius) y ficha ISSF 2027 cuando existan.
 8. Revisión de textos en inglés por un nativo.

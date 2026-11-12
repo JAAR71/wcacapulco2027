@@ -26,15 +26,19 @@
 <div class="field" data-for="athlete"><label for="rId">ISSF ID</label><input id="rId" data-ph-es="Del sistema shootingsportscloud" data-ph-en="From shootingsportscloud"></div>
 <div class="field" data-for="official"><label for="rRole"><span lang="es">Función</span><span lang="en">Role</span></label><select id="rRole"><option value="coach" data-es="Entrenador" data-en="Coach">Entrenador</option><option value="head" data-es="Jefe de equipo" data-en="Team leader">Jefe de equipo</option><option value="medic" data-es="Médico / fisioterapeuta" data-en="Doctor / physio">Médico / fisioterapeuta</option><option value="judge" data-es="Juez" data-en="Judge">Juez</option><option value="other" data-es="Otro" data-en="Other">Otro</option></select></div>
 <div class="field"><label for="rEmail"><span lang="es">Correo de contacto</span><span lang="en">Contact email</span></label><input id="rEmail" type="email" required></div>
-<div class="btns"><button class="btn btn-primary" type="submit"><span lang="es">Guardar registro (demo)</span><span lang="en">Save registration (demo)</span></button></div>
-<p class="muted" style="font-size:.8rem;margin:0"><span lang="es">Demo local: los datos se guardan solo en este navegador (localStorage). No se envía nada.</span><span lang="en">Local demo: data is stored only in this browser (localStorage). Nothing is sent.</span></p>
+<div class="btns"><button class="btn btn-primary" type="submit"><span lang="es">Guardar registro</span><span lang="en">Save registration</span></button></div>
+<p class="muted" style="font-size:.8rem;margin:0"><span lang="es">Con Supabase activo los datos van a Postgres; si no, solo en este navegador (localStorage).</span><span lang="en">With Supabase enabled, data goes to Postgres; otherwise only this browser (localStorage).</span></p>
 </form></div>
 <div><div class="kpis" id="regKpis"></div>
 <div class="section-head"><h3 style="margin:0"><span lang="es">Registros capturados</span><span lang="en">Saved registrations</span></h3><div class="btns"><button class="btn btn-outline btn-sm" id="regCsv" type="button">CSV ↓</button><button class="btn btn-outline btn-sm" id="regReset" type="button"><span lang="es">Restaurar ejemplo</span><span lang="en">Reset example</span></button></div></div>
 <div class="table-wrap"><table><thead><tr><th><span lang="es">Tipo</span><span lang="en">Type</span></th><th><span lang="es">País</span><span lang="en">Country</span></th><th><span lang="es">Nombre / detalle</span><span lang="en">Name / detail</span></th><th></th></tr></thead><tbody id="regBody"></tbody></table></div></div>
 </div></div></section>
 </main>
+<script src="js/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="js/layout.js"></script>
+<script src="js/db.js"></script>
+<script src="js/auth.js"></script>
 <script src="js/registros.js"></script>
 </body>
 </html>

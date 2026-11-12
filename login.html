@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Entrar · Acapulco 2027 (BORRADOR)</title>
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="login">
+<main id="main">
+<section class="page-head"><div class="wrap">
+<div class="crumbs"><a href="index.html"><span lang="es">Inicio</span><span lang="en">Home</span></a> / <span lang="es">Entrar</span><span lang="en">Sign in</span></div>
+<h1><span lang="es">Acceso al portal</span><span lang="en">Portal access</span></h1>
+<p><span lang="es">Módulos de delegaciones y finanzas requieren cuenta activada por un administrador.</span><span lang="en">Delegation modules and finance require an account activated by an administrator.</span></p>
+</div></section>
+<section class="section"><div class="wrap" style="max-width:480px">
+<div class="card" id="loginCard">
+<div class="tabs" role="tablist" id="loginTabs">
+<button type="button" data-mode="in" aria-selected="true"><span lang="es">Entrar</span><span lang="en">Sign in</span></button>
+<button type="button" data-mode="up" aria-selected="false"><span lang="es">Solicitar acceso</span><span lang="en">Request access</span></button>
+</div>
+<p class="muted" id="loginHint" style="font-size:.85rem"></p>
+<form class="form" id="loginForm">
+<div class="field" id="nameField" hidden>
+<label for="lName"><span lang="es">Nombre completo</span><span lang="en">Full name</span></label>
+<input id="lName" data-ph-es="Como aparece en documentos" data-ph-en="As on documents">
+</div>
+<div class="field">
+<label for="lEmail">Email</label>
+<input id="lEmail" type="email" required autocomplete="username">
+</div>
+<div class="field">
+<label for="lPass"><span lang="es">Contraseña</span><span lang="en">Password</span></label>
+<input id="lPass" type="password" required minlength="6" autocomplete="current-password">
+</div>
+<div class="btns">
+<button class="btn btn-primary" type="submit" id="loginSubmit"><span lang="es">Entrar</span><span lang="en">Sign in</span></button>
+</div>
+</form>
+<p class="muted" style="font-size:.8rem;margin-top:1rem" id="cfgHint"></p>
+</div>
+</div></section>
+</main>
+<script src="js/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/layout.js"></script>
+<script src="js/db.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
